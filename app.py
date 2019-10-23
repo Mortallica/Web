@@ -19,7 +19,7 @@ def lista():
 def guardarparticipantes():
     participantes = dict(request.values)
     participantes['estrato'] = int(participantes['estrato'])
-    requests.post('https://webclient-evergreen-934.azurewebsites.netparticipantes',json=participantes)
+    requests.post('https://webclient-evergreen-934.azurewebsites.net/participantes',json=participantes)
     return(lista())
    # return render_template('lista.html',participantes=participantes_list)
 
