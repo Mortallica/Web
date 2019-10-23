@@ -12,14 +12,14 @@ def formulario():
 
 @app.route('/lista')
 def lista():
-    participantes_list = requests.get('http://localhost:5000/participantes').json()
+    participantes_list = requests.get('https://webclient-evergreen-934.azurewebsites.net/participantes').json()
     return render_template('lista.html',participantes=participantes_list)
 
 @app.route('/guardarparticipantes',methods=['POST'])
 def guardarparticipantes():
     participantes = dict(request.values)
     participantes['estrato'] = int(participantes['estrato'])
-    requests.post('http://localhost:5000/participantes',json=participantes)
+    requests.post('https://webclient-evergreen-934.azurewebsites.netparticipantes',json=participantes)
     return(lista())
    # return render_template('lista.html',participantes=participantes_list)
 
