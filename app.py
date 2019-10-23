@@ -22,3 +22,5 @@ def guardarparticipantes():
     requests.post('http://localhost:5000/participantes',json=participantes)
     return(lista())
    # return render_template('lista.html',participantes=participantes_list)
+
+  
