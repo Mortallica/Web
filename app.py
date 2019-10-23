@@ -23,4 +23,4 @@ def guardarparticipantes():
     return(lista())
    # return render_template('lista.html',participantes=participantes_list)
 
-  
+app.run(debug = true)  
